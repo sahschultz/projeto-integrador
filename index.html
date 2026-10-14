@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Energia Solar: Ciência e Sustentabilidade</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+<header>
+ <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="readingProgress"></div></div>
+ <div class="nav-wrap">
+  <a class="brand" href="#inicio" aria-label="Energia Solar: Ciência e Sustentabilidade, página inicial"><span class="brand-mark" aria-hidden="true">☀</span> ENERGIA SOLAR</a>
+  <nav aria-label="Menu principal">
+   <a href="#ciencia">Ciência</a><a href="#simulador">Simulador</a><a href="#sensores">Sensores</a><a href="#acessibilidade">Acessibilidade</a><a href="#mapa">Mapa do site</a>
+  </nav>
+  <div class="access-tools" aria-label="Opções de acessibilidade">
+   <button class="secondary" id="contrastBtn" type="button" aria-pressed="false">◐ Contraste</button>
+   <button class="secondary" id="dyslexiaBtn" type="button" aria-pressed="false">Aa Leitura</button>
+  </div>
+ </div>
+</header>
+<main id="conteudo">
+<section class="hero" id="inicio">
+ <div class="hero-inner">
+  <div>
+   <div class="eyebrow">Projeto Integrador · Ciência + Tecnologia</div>
+   <h1>O sol aquece.<br>A água ensina.</h1>
+   <p>Descubra como ondas eletromagnéticas, radiação térmica, efeito fotoelétrico e sensores podem ajudar a tornar uma piscina mais eficiente, sustentável e acessível.</p>
+   <div class="hero-actions"><a class="button" href="#simulador">Experimentar simulador ↓</a><a class="button" style="background:#fff;color:#12334a;border:1px solid #d7e5e9" href="#ciencia">Explorar a ciência</a></div>
+  </div>
+  <div class="hero-art" aria-label="Ilustração de uma piscina azul recebendo energia do sol" role="img">
+   <div class="sun-disc"></div><div class="pool-art"><span class="pool-label">PISCINA EFICIENTE</span></div>
+   <div class="floating float-one">☀ Energia solar</div><div class="floating float-two">💧 Água + sensores</div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="ciencia">
+ <div class="container">
+  <div class="eyebrow">01 · Conceitos científicos</div><h2>A física por trás da piscina</h2>
+  <p class="section-intro">A piscina é um ótimo laboratório: ela recebe energia do ambiente, troca calor com o ar e pode usar sensores para ajudar a controlar seu funcionamento.</p>
+  <div class="grid">
+   <article class="card"><span class="icon" aria-hidden="true">〰️</span><h3>Ondas eletromagnéticas</h3><p>A luz visível e o infravermelho transportam energia sem precisar de um meio material. A radiação solar que chega à superfície pode ser absorvida, refletida ou transmitida.</p><span class="tag">Energia em trânsito</span></article>
+   <article class="card"><span class="icon" aria-hidden="true">🌡️</span><h3>Radiação térmica e corpo negro</h3><p>Todo corpo com temperatura acima do zero absoluto emite radiação. Um corpo negro ideal absorve toda a radiação incidente e é também um emissor ideal. Superfícies reais têm comportamento aproximado.</p><span class="tag">Absorção e emissão</span></article>
+   <article class="card"><span class="icon" aria-hidden="true">⚡</span><h3>Efeito fotoelétrico</h3><p>Quando fótons com energia suficiente atingem certos materiais, podem liberar elétrons. O efeito fotoelétrico está na base de sensores de luz e relacionado ao funcionamento de dispositivos fotovoltaicos.</p><span class="tag">Luz → eletricidade</span></article>
+  </div>
+  <div class="science-layout" style="margin-top:1.2rem">
+   <article class="science-card"><h3>Como isso se conecta à piscina?</h3><p><strong>Coletor solar térmico:</strong> uma superfície absorvedora capta energia solar e transfere calor para a água por meio de tubulações. Não é necessário que seja um corpo negro perfeito para funcionar.</p><p><strong>Capa térmica:</strong> reduz a evaporação, que é uma importante forma de perda de energia, e diminui trocas de calor com o ambiente. A piscina também emite radiação infravermelha.</p><p><strong>Painel fotovoltaico:</strong> converte parte da energia luminosa em eletricidade, que pode alimentar equipamentos adequados, como sistemas de controle ou bombas.</p></article>
+   <article class="science-card"><h3>Fórmulas para entender</h3><div class="formula">E = h · f</div><p>A energia de um fóton depende da frequência da radiação: quanto maior a frequência, maior a energia por fóton.</p><div class="formula">P<sub>rad</sub> = ε · σ · A · T⁴</div><p>Modelo simplificado da potência térmica emitida por uma superfície, considerando emissividade ε, área A e temperatura absoluta T. A troca líquida também depende da radiação recebida do entorno.</p></article>
+  </div>
+  <div class="note"><strong>Importante:</strong> o simulador deste site é educativo. Seus números são estimativas ilustrativas, não substituem medições reais, projeto térmico ou orientação profissional.</div>
+  <div class="fun-fact"><strong>💗 Curiosidade solar</strong><p id="factText">A energia do Sol chega à Terra por radiação eletromagnética, atravessando o espaço quase vazio.</p><button type="button" class="secondary" id="newFact">Outra curiosidade ✨</button></div>
+ </div>
+</section>
+
+<section class="section alt" id="simulador">
+ <div class="container">
+  <div class="eyebrow">02 · Laboratório virtual</div><h2>Simule o aquecimento da piscina</h2>
+  <p class="section-intro">Mude a intensidade do sol, a temperatura da água e o uso da capa. Observe como essas condições podem alterar o balanço térmico estimado.</p>
+  <div class="science-layout">
+   <div class="simulator">
+    <h3>Controles do experimento</h3>
+    <label for="sunRange">Intensidade solar: <span id="sunVal">70%</span></label>
+    <input id="sunRange" type="range" min="0" max="100" value="70" aria-describedby="sunHelp">
+    <div class="value-row"><span>0 · noite/nublado</span><span>100 · sol forte</span></div><p id="sunHelp" class="small">Representa a disponibilidade relativa de energia solar, não uma medição meteorológica.</p>
+    <label for="tempRange">Temperatura da água: <span id="tempVal">26 °C</span></label>
+    <input id="tempRange" type="range" min="15" max="40" value="26">
+    <div class="value-row"><span>15 °C</span><span>40 °C</span></div>
+    <label for="airRange">Temperatura do ar: <span id="airVal">22 °C</span></label>
+    <input id="airRange" type="range" min="5" max="38" value="22">
+    <div class="value-row"><span>5 °C</span><span>38 °C</span></div>
+    <label class="switch-row" for="coverCheck"><input id="coverCheck" type="checkbox"><span><strong>Usar capa térmica</strong><br><span class="small">Ajuda a reduzir evaporação e perdas de calor.</span></span></label>
+    <div class="pool-visual" id="poolVisual" role="img" aria-label="Ilustração da piscina e do nível visual de aquecimento"><div class="heat" id="heatFill"></div><div class="cover"></div><span class="thermo" id="poolThermo">26 °C</span></div>
+    <p id="status" role="status" aria-live="polite"></p>
+   </div>
+   <div>
+    <div class="card"><h3>Resultado estimado</h3><p>Os indicadores mostram tendências simplificadas com base nas condições escolhidas.</p>
+     <div class="result-grid" style="background:#12334a;padding:.7rem;border-radius:18px">
+      <div class="result"><strong id="solarResult">70%</strong><span>energia solar disponível</span></div>
+      <div class="result"><strong id="lossResult">Média</strong><span>tendência de perda térmica</span></div>
+      <div class="result"><strong id="balanceResult">Favorável</strong><span>balanço ilustrativo</span></div>
+     </div>
+     <h3 style="margin-top:1.5rem">O que observar?</h3>
+     <ul><li>Mais radiação solar geralmente aumenta a energia disponível para aquecimento.</li><li>Quando a água está mais quente que o ar, pode haver maior tendência de perda de calor para o ambiente.</li><li>A capa reduz principalmente a evaporação; ela não cria energia nem elimina toda perda térmica.</li></ul>
+     <button type="button" class="sun" id="resetSim">Restaurar valores iniciais ↺</button>
+    </div>
+    <div class="note"><strong>Pergunta para investigar:</strong> o que acontece se você mantiver o mesmo sol e a mesma temperatura, mas ligar e desligar a capa?</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="sensores">
+ <div class="container">
+  <div class="eyebrow">03 · Robótica e automação</div><h2>Uma piscina que percebe o ambiente</h2>
+  <p class="section-intro">Sensores transformam fenômenos físicos em sinais que um controlador pode interpretar. A automação pode apoiar decisões, mas deve ser projetada com segurança e supervisão.</p>
+  <div class="sensor-demo">
+   <div class="card"><h3>Componentes possíveis</h3>
+    <ul><li><strong>Sensor de temperatura:</strong> mede a temperatura da água.</li><li><strong>Sensor de luminosidade:</strong> estima a luz disponível para o sistema solar.</li><li><strong>Controlador:</strong> compara as leituras com valores definidos.</li><li><strong>Atuador:</strong> pode acionar uma válvula ou sinalizar uma bomba, conforme o projeto.</li></ul>
+    <p>Exemplo de regra: se a água estiver abaixo da temperatura desejada e houver energia solar disponível, o sistema pode recomendar o aquecimento, respeitando os limites de segurança.</p>
+   </div>
+   <div class="sensor-screen" aria-label="Painel demonstrativo de sensores">
+    <div><span class="led" id="ledTemp"></span><strong>PAINEL DE MONITORAMENTO (SIMULADO)</strong></div>
+    <p>Temperatura da água</p><div class="value-row"><span id="sensorTemp">26 °C</span><span>meta: 28 °C</span></div><div class="gauge"><span id="tempGauge"></span></div>
+    <p>Luminosidade relativa</p><div class="value-row"><span id="sensorLight">70%</span><span>sensor de luz</span></div><div class="gauge"><span id="lightGauge"></span></div>
+    <p><span class="led" id="ledSystem"></span><strong id="sensorDecision">Sistema: observar condições</strong></p>
+    <p class="small">Os valores acompanham o simulador e não vêm de sensores físicos reais.</p>
+   </div>
+  </div>
+  <h3 style="margin-top:2rem">Fluxo de automação conceitual</h3>
+  <ol class="steps"><li><div><strong>Medir</strong><br>Os sensores recolhem dados de temperatura e luminosidade.</div></li><li><div><strong>Comparar</strong><br>O controlador compara as leituras com a meta e as regras de operação.</div></li><li><div><strong>Decidir com segurança</strong><br>O sistema sinaliza uma ação possível; proteções elétricas e hidráulicas devem ser consideradas no projeto real.</div></li></ol>
+ </div>
+</section>
+
+<section class="section alt" id="impacto">
+ <div class="container">
+  <div class="eyebrow">04 · Sustentabilidade e impacto</div><h2>Pequenas decisões, melhor uso de recursos</h2>
+  <div class="grid">
+   <article class="card"><span class="icon" aria-hidden="true">♻️</span><h3>Economia de energia</h3><p>Combinar aquecimento solar, capa térmica e controle de temperatura pode reduzir desperdícios, dependendo do clima, da instalação e do uso.</p></article>
+   <article class="card"><span class="icon" aria-hidden="true">💧</span><h3>Uso responsável da água</h3><p>Evitar evaporação desnecessária ajuda a conservar água. A manutenção adequada também contribui para a qualidade e a segurança da piscina.</p></article>
+   <article class="card"><span class="icon" aria-hidden="true">🤝</span><h3>Ciência para todos</h3><p>Contraste, navegação por teclado, texto claro e recursos em Libras ajudam mais pessoas a explorar o conteúdo.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="acessibilidade">
+ <div class="container">
+  <div class="eyebrow">05 · Acessibilidade e inclusão</div><h2>Este site foi pensado para mais pessoas</h2>
+  <p class="section-intro">Use as opções no topo para ativar alto contraste ou uma fonte/leitura mais espaçada. É possível navegar pelos links e controles usando a tecla Tab e ativar botões com Enter ou Espaço.</p>
+  <div class="access-grid">
+   <article class="card"><h3>Recursos disponíveis</h3><ul><li>Estrutura semântica com títulos e regiões de navegação.</li><li>Link “Pular para o conteúdo principal”.</li><li>Foco de teclado visível.</li><li>Opção de alto contraste e leitura espaçada.</li><li>Simulador com rótulos e anúncios de resultado.</li><li>Respeito à preferência do sistema por movimento reduzido.</li></ul></article>
+   <article class="card"><h3>VLibras e vídeos em Libras</h3><p>O widget VLibras abaixo é carregado do serviço oficial. A disponibilidade pode depender da conexão com a internet.</p>
+    <div class="video-placeholder"><strong>📹 Espaço reservado para vídeo em Libras</strong><p>Inserir aqui um vídeo com tradução em Libras explicando os conceitos de ondas eletromagnéticas, radiação térmica, efeito fotoelétrico e sensores.</p><p class="small">Ao adicionar o vídeo, inclua título, descrição e legendas em português quando disponíveis.</p></div>
+   </article>
+  </div>
+ </div>
+</section>
+
+
+<section class="section" id="quiz">
+ <div class="container">
+  <div class="eyebrow">Desafio interativo · teste seus conhecimentos</div><h2>Quiz relâmpago 💗</h2>
+  <p class="section-intro">Responda e descubra quanto você aprendeu sobre energia solar e aquecimento de piscinas.</p>
+  <div class="quiz-box"><p id="quizCount"><strong>Pergunta 1 de 3</strong></p><h3 id="quizQuestion">Como a energia do Sol chega até a Terra?</h3><div class="quiz-options" id="quizOptions"><button type="button" data-answer="0">Por ondas sonoras</button><button type="button" data-answer="1">Por radiação eletromagnética</button><button type="button" data-answer="2">Somente pelo vento</button></div><p id="quizFeedback" role="status" aria-live="polite">Escolha uma resposta!</p><button type="button" id="nextQuestion" disabled>Próxima pergunta →</button><span id="quizScore" class="small" aria-live="polite"></span></div>
+ </div>
+</section>
+
+<section class="section alt" id="mapa">
+ <div class="container">
+  <div class="eyebrow">06 · Navegação</div><h2>Mapa do site</h2><p class="section-intro">Acesse diretamente qualquer parte do projeto.</p>
+  <div class="sitemap">
+   <a href="#inicio">☀ Início e apresentação</a><a href="#quiz">💗 Quiz relâmpago</a><a href="#ciencia">🔬 Conceitos científicos</a><a href="#simulador">🌡️ Simulador térmico</a><a href="#sensores">🤖 Sensores e automação</a><a href="#impacto">♻️ Sustentabilidade</a><a href="#acessibilidade">♿ Acessibilidade e Libras</a><a href="#mapa">🧭 Mapa do site</a>
+  </div>
+ </div>
+</section>
+</main>
+<footer><div class="container"><div><h2>Energia Solar: Ciência e Sustentabilidade ☀</h2><p>Projeto Integrador CEP · 3º trimestre</p></div><div><p>Ciência, programação, robótica e inclusão.</p><p class="small">Material educativo. Simulações ilustrativas, não medições reais.</p><a href="#inicio">Voltar ao topo ↑</a></div></div></footer>
+<button class="back-top" id="backTop" type="button" aria-label="Voltar ao início" title="Voltar ao início">↑</button>
+
+<!-- Widget de acessibilidade VLibras: depende de conexão com a internet. -->
+<div vw class="enabled"><div vw-access-button class="active"></div><div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div></div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+
+
+ <script src="script.js"></script>
+</body>
+</html>

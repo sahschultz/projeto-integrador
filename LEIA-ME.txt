@@ -1,0 +1,10 @@
+ENERGIA SOLAR: CIÊNCIA E SUSTENTABILIDADE
+
+Arquivos do site:
+- index.html: estrutura e conteúdo
+- style.css: visual em tons de rosa e adaptação para celular
+- script.js: simulador, painel de sensores, curiosidades e quiz interativo
+
+Como abrir: extraia o ZIP e abra index.html no navegador. Mantenha os três arquivos na mesma pasta.
+
+Interações incluídas: simulador térmico, controles de acessibilidade, curiosidades clicáveis, quiz com pontuação, barra de progresso de leitura e botão para voltar ao topo. O widget VLibras depende de internet.
