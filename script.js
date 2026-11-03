@@ -1,9 +1,6 @@
 // Energia Solar: Ciência e Sustentabilidade — interatividade do site
 
 // Inicializa o recurso VLibras, quando a biblioteca estiver disponível.
-if (window.VLibras) {
-  new window.VLibras.Widget('https://vlibras.gov.br/app');
-}
 
 const $ = (id) => document.getElementById(id);
 const sun = $('sunRange'), temp = $('tempRange'), air = $('airRange'), cover = $('coverCheck');
